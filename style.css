@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+font-family: 'Open Sans';
+margin: 0;
+padding: 0;
+}
+
+body{
+height: 100%;
+width: 100%;
+background-color: #02000A;
+color: black;
+overflow: hidden;
+animation: enter 1s linear normal
+}
+
+@keyframes enter {
+0%{
+transform: translateX(-50px);
+opacity: 0;
+}
+100%{
+transform: translateX(0px);
+opacity: 1;
+}
+}
+
+header {
+width: 500px;
+margin: 150px auto 30px auto;
+}
+
+.logo {
+width: 500px;
+}
+
+.principal {
+background-color: #02000A ;
+color: #fff;
+height: 300px;
+width: 400px;
+justify-content: center;
+align-items: center;
+margin: 30px auto;
+display: flex;
+flex-direction: column;
+font-size: 20px;
+
+}
+
+.principal::before, .principal::after {
+content: '';
+position: absolute;
+width: calc(400px + 10px);
+height: calc(300px + 10px);
+z-index: -1;
+background: linear-gradient(45deg, #9d00ff, #000000, #9d00ff, black, #9d00ff);
+background-size: 300%;
+border-radius: 8px;
+animation: animarBorda 8s linear infinite;
+}
+
+@keyframes animarBorda {
+0% {
+ background-position: 0;
+}
+100%{
+ background-position: 100%;
+}
+}
+
+.principal::after {
+filter: blur(50px);
+}
+
+.text {
+
+}
+
+.inp {
+display: flex;
+flex-direction: column;
+}
+
+.slider {
+width: 380px;
+height: 5px;
+-webkit-appearance: none;
+outline: none;
+border-radius: 5px;
+margin-top: 15px;
+margin-bottom: 30px;
+}
+
+.slider::-webkit-slider-thumb {
+background: #9d00ff;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+appearance: none;
+}
+
+.g {
+width: 300px;
+height: 40px;
+margin: auto;
+border-radius: 10px;
+border: #fff 2px solid;
+background-color: #201c22;
+font-size: 20px;
+transition: 0.5s;
+color: #ffffff;
+}
+
+.g:hover {
+cursor: pointer;
+transform: scale(1.05);
+transition: 0.5s;
+background-color: #9d00ff9e;
+}
+
+.password {
+height: 35px;
+width: 290px;
+background-color: #201c22;
+border-radius: 10px;
+margin: 30px auto 0px auto;
+display: none;
+color: #fff;
+text-align: center;
+}
+
+.copy {
+font-size: 0.7em;
+width: 150px;
+background-color: #9d00ff;
+margin: 10px auto -20px auto;
+border-radius: 6px;
+cursor: pointer;
+animation: copyy 0.5s linear;
+display: none;
+}
+
+@keyframes copyy {
+0%{
+transform: translateY(-20px);
+opacity: 0;
+}
+100%{
+transform: translateY(0px);
+opacity: 1;
+}
+}
